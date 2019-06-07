@@ -4,6 +4,9 @@
   "description": "Api use to manage tickets",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint",
+    "inspect": "eslint .",
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +18,24 @@
   "bugs": {
     "url": "https://github.com/emmanbern/ticketApi/issues"
   },
-  "homepage": "https://github.com/emmanbern/ticketApi#readme"
+  "homepage": "https://github.com/emmanbern/ticketApi#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1"
+  },
+  "devDependencies": {
+    "eslint": "^5.16.0"
+  },
+  "nodemonConfig":{
+    "restartable": "rs",
+    "ignore":[
+      "node_modules/**/node_modules"
+    ],
+    "delay": "2500",
+    "env":{
+      "NODE_ENV": "Developpment",
+      "PORT": 4000
+    } 
+    
+  }
 }
